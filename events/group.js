@@ -11,12 +11,12 @@ module.exports = {
                 const newUsers = event.logMessageData.addedParticipants;
                 for (const user of newUsers) {
                     const userID = user.userFbId;
-                    const userName = user.fullName || "there";
+                    const userName = user.fullName || "warren prst";
 
                     const mentions = [
                         { tag: `@${userName}`, id: userID },
-                        { tag: "@Mark", id: "100030880666720" },
-                        { tag: "@BotCreator", id: "100030880666720" }
+                        { tag: "@warren", id: "61550188503841" },
+                        { tag: "@BotCreator", id: "61550188503841" }
                     ];
 
                     const message = {
@@ -24,7 +24,7 @@ module.exports = {
 👥 Total members: ${totalMembers}
 
 
-👨‍💻[ADMIN] @Mark: Pm any message to the bobong owner ng bot if you see problem 
+👨‍💻[ADMIN] @warren: Pm any message to the bobong owner ng bot if you see problem 
 
 Bot creator:  @BotCreator`,
                         mentions
