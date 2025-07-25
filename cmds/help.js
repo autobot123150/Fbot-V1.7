@@ -54,7 +54,7 @@ Version: ${command.version}`;
             .filter(cmd => !cmd.admin)
             .sort((a, b) => a.name.localeCompare(b.name))
             .slice(0, 5)
-            .map((cmd, index) => `${index + 1}. ${cmd.name} (${cmd.usePrefix ? "uses prefix" : "no prefix"})\n   Usage: ${cmd.usage}`)
+            .map((cmd, index) => `${index + 1}. ${cmd.name} (${cmd.usePrefix ? "uses prefix bobo" : "no prefix kasi di ni lagyan ng admin"})\n   Usage: ${cmd.usage}`)
             .join("\n\n");
 
         const helpMessage = `
