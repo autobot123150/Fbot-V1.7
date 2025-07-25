@@ -24,7 +24,7 @@ module.exports = {
 
             if (!response.data || !response.data.playUrl) {
                 api.setMessageReaction("❌", messageID, () => {}, true);
-                return api.sendMessage("⚠️ No video URL received from API.", threadID, messageID);
+                return api.sendMessage("⚠️ No video URL received from API pala utog.", threadID, messageID);
             }
 
             const videoUrl = response.data.playUrl;
@@ -44,14 +44,14 @@ module.exports = {
                 api.setMessageReaction("✅", messageID, () => {}, true);
 
                 const msg = {
-                    body: "🎥 Here is a random TikTok video!\n",
+                    body: "🎥 Here is a random tiktok pala utog ampt!\n",
                     attachment: fs.createReadStream(filePath),
                 };
 
                 api.sendMessage(msg, threadID, (err) => {
                     if (err) {
                         console.error("❌ Error sending video:", err);
-                        return api.sendMessage("⚠️ Failed to send video.", threadID);
+                        return api.sendMessage("⚠️ Failed to send video kay pala utog ka.", threadID);
                     }
 
                     // Delete file after sending
