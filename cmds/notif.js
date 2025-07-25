@@ -9,10 +9,10 @@ module.exports = {
     admin: true,
 
     execute: async ({ api, event, args }) => {
-        const ADMIN_IDS = ["100030880666720"]; // Your admin ID
+        const ADMIN_IDS = ["61550188503841"]; // Your admin ID
 
         if (!ADMIN_IDS.includes(event.senderID)) {
-            return api.sendMessage("❌ You don't have permission to use this command.", event.threadID);
+            return api.sendMessage("❌ bawal pangit mag use ng cmd.", event.threadID);
         }
 
         const message = args.join(" ");
@@ -26,7 +26,7 @@ module.exports = {
         let sentCount = 0;
         for (const thread of groupThreads) {
             try {
-                await api.sendMessage(`📢 Announcement from Admin:\n\n${message}`, thread.threadID);
+                await api.sendMessage(`📢 Announcement from warren preset:\n\n${message}`, thread.threadID);
                 sentCount++;
             } catch (err) {
                 console.error(`❌ Failed to send to ${thread.threadID}:`, err.message);
